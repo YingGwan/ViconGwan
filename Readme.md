@@ -14,7 +14,7 @@
 
 ## Several Notes
 
-- ***Target of this simple project is to use live-stream of Vicon System with cmake-triple-click*** (<img src="https://raw.githubusercontent.com/YingGwan/TyporaUploadImg/main/typora202101/26/210353-33650.jpeg" style="zoom:20%" />)
+- ***Target of this simple project is to use live-stream of Vicon System with cmake-triple-click*** (<img src="https://raw.githubusercontent.com/YingGwan/TyporaUploadImg/main/typora202101/26/210353-33650.jpeg" style="zoom:10%" />)
 
 - You could use CMake to build, remember:
   - all libs have been linked in the build step

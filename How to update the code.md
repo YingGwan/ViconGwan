@@ -92,7 +92,7 @@
 
   add and delete
 
-- git commit -m "new change"
+- git commit -m "change"
 
 - git pull origin master
 
