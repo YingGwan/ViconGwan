@@ -1,0 +1,43 @@
+<!--
+***********************************************************************************************
+
+  Copied from $(VCTargetsPath)\Microsoft.CppCommon.targets.
+
+  Some of our PreBuildEvent, PreLinkEvent and PostBuildEvents output to the console in a format that Visual Studio
+  by default treats as an error. 
+
+  Adding Exec argument IgnoreStandardErrorWarningFormat="True" allows console output, formatted as 
+  http://blogs.msdn.com/b/msbuild/archive/2006/11/03/msbuild-visual-studio-aware-error-messages-and-message-formats.aspx,
+  to be output to the console without causing the PreBuild, PreLink and PostBuild events to be marked as failing.
+
+  _BuildSuffix is a goto label provided as a means to skip the rest of the command when debugging.
+  See https://blogs.msdn.microsoft.com/visualstudio/2010/04/26/custom-build-steps-tools-and-events/ for more information.
+
+***********************************************************************************************
+-->
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask TaskName="VCMessage" AssemblyName="Microsoft.Build.CppTasks.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+
+  <PropertyGroup>
+    <_BuildSuffix>
+:VCEnd</_BuildSuffix>
+  </PropertyGroup>
+
+  <Target Name="PreBuildEvent" Condition="'$(PreBuildEventUseInBuild)'!='false'">
+    <Message Text="Description: %(PreBuildEvent.Message)" Condition="'%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != ''"/>
+    <Exec Command="%(PreBuildEvent.Command)$(_BuildSuffix)" Condition="'%(PreBuildEvent.Command)' != ''" IgnoreStandardErrorWarningFormat="True"/>
+  </Target>
+
+  <Target Name="PreLinkEvent" Condition="'$(PreLinkEventUseInBuild)'!='false'">
+    <Message Text="Description: %(PreLinkEvent.Message)" Condition="'%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != ''"/>
+    <Exec Command="%(PreLinkEvent.Command)$(_BuildSuffix)" Condition="'%(PreLinkEvent.Command)' != ''" IgnoreStandardErrorWarningFormat="True"/>
+  </Target>
+
+  <Target Name="PostBuildEvent" Condition="'$(PostBuildEventUseInBuild)'!='false'">
+    <Message Text="Description: %(PostBuildEvent.Message)" Condition="'%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != ''"/>
+    <Exec Command="%(PostBuildEvent.Command)$(_BuildSuffix)" Condition="'$(_BuildSuffix)' != ':VCEnd'" IgnoreStandardErrorWarningFormat="True"/>
+  </Target>
+  
+</Project>

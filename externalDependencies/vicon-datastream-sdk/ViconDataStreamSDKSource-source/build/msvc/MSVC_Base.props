@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- common properties shared by all configurations -->
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>NotSet</CharacterSet>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <!-- This PropertyGroup with no label contains project configuration level settings. These settings apply to all
+       files that are part of the specified item group. Build Customization item definition metadata also gets
+       initialized here.
+       See https://blogs.msdn.microsoft.com/visualstudio/2010/05/14/a-guide-to-vcxproj-and-props-file-structure/ -->
+  <PropertyGroup>
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)bin\$(Configuration)</LocalDebuggerWorkingDirectory>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <PreBuildEvent>
+      <Message>Performing pre-build event</Message>
+      <Command>echo %TIME%: Building $(ProjectName)...</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <DisableSpecificWarnings>
+        4305; <!-- warning C4305: 'initializing': truncation from 'double' to 'float' -->
+        4738; <!-- storing 32-bit float result in memory, possible loss of performance -->
+        4838; <!-- conversion from 'double' to 'float' requires a narrowing conversion -->
+        %(DisableSpecificWarnings)
+      </DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <!-- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES - provides template overloads for unsafe functions (strcpy is mapped to strcpy_s) -->
+      <!-- WIN32_LEAN_AND_MEAN - ensures minimal inclusion of windows headers -->
+      <!-- NOMINMAX - Prevent the windows min/max macros from being defined to stop them colliding with other libraries -->
+      <!-- FD_SETSIZE - By default winsock only allows 64 sockets, we need to allow many more devices and services -->
+      <PreprocessorDefinitions>_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES;WIN32;_WINDOWS;WIN32_LEAN_AND_MEAN;NOMINMAX;FD_SETSIZE=1024;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <!-- /bigobj - allows for larger object files which is required with some template heavy code, we enable it for all projects as the only disadvantage to using it is incompatibility with pre-Visual Studio 2005 linkers. -->
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <!-- UseFullPaths is unnecessary as we usually have absolute paths in our projects, and it lowercases the path, breaking generated FishEye URLs -->
+      <UseFullPaths>false</UseFullPaths>
+    </ClCompile>
+    <ResourceCompile>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+    </ResourceCompile>
+    <Link>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <LargeAddressAware>true</LargeAddressAware>
+      <FixedBaseAddress>false</FixedBaseAddress>
+    </Link>
+    <PostBuildEvent>
+      <Message>Performing post-build event</Message>
+      <Command>echo %TIME%: Built $(ProjectName).</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+
+  <!-- Only pre-Visual Studio 2015 (v140) requires the /Zm flag.
+       See https://blogs.msdn.microsoft.com/vcblog/2017/07/13/precompiled-header-pch-issues-and-recommendations/ for more information. -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v110' Or '$(PlatformToolset)'=='v120'">
+    <ClCompile>
+      <!-- /Zm280 - Determines the amount of memory that the compiler allocates to construct precompiled headers. -->
+      <AdditionalOptions>/Zm280 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Visual Studio 15.0 specific warnings -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v141'">
+    <ClCompile>
+      <DisableSpecificWarnings>
+        <!-- workaround for https://developercommunity.visualstudio.com/content/problem/220812/experimentalexternal-generates-a-lot-of-c4193-warn.html
+             hopefully fixed in Visual Studio 16.0 -->
+        4193; <!-- #pragma warning(pop): no matching '#pragma warning(push)' -->
+        %(DisableSpecificWarnings)
+      </DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Visual Studio 15.0 and later compiler specific warnings -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v141' Or '$(PlatformToolset)'=='v142'">
+    <ClCompile>
+      <DisableSpecificWarnings>
+        5030; <!-- attribute 'OMG::AlwaysIntrospect' is not recognized -->
+        %(DisableSpecificWarnings)
+      </DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Visual Studio 16.0 specific warnings -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v142'">
+    <ClCompile>
+      <DisableSpecificWarnings>
+        5204; <!-- class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly -->
+        %(DisableSpecificWarnings)
+      </DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- This will only define WINVER and _WIN32_WINNT if no other property sheets have altered WindowsVersionDefined
+       See options/WindowsVersionWindows8.props for an example of this being overridden. -->
+  <PropertyGroup>
+    <WindowsVersionDefined>0</WindowsVersionDefined>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="$(WindowsVersionDefined) == '0'">
+    <ClCompile>
+      <!-- WINVER=0x0601 - Define the minimum required Windows SDK version -->
+      <!-- _WIN32_WINNT=0x0601 - Define the minimum required Windows SDK version -->
+      <!-- From SDKDDKVer.h : #define _WIN32_WINNT_WIN7 0x0601 // Windows 7 -->
+      <PreprocessorDefinitions>WINVER=0x0601;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Debug configuration properties -->
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <!-- _ITERATOR_DEBUG_LEVEL=2 - Enable all stl iterator debug checks, this supersedes _SECURE_SCL -->
+      <!-- _ALLOW_RTCc_IN_STL - Acknowledge that we have received the following warning caused by SmallerTypeCheck below.
+                                /RTCc rejects conformant code, so it isn't supported by the C++ Standard Library." -->
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=2;_ALLOW_RTCc_IN_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <!-- SmallerTypeCheck is only compatible when using a debug Runtime library and Optimization is disabled -->
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- InternalRelease configuration properties -->
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='InternalRelease'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <!-- _ITERATOR_DEBUG_LEVEL=0 - Disable all stl iterator debug checks, this supersedes _SECURE_SCL -->
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- Release configuration properties -->
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <Optimization>Full</Optimization>
+      <!-- _ITERATOR_DEBUG_LEVEL=0 - Disable all stl iterator debug checks, this supersedes _SECURE_SCL -->
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- 32-bit Release configuration propoerties -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x32'">
+    <ClCompile>
+      <!-- /arch:SSE2 is only available when building for the x86 architecture. -->
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Visual Studio 2015 doesn't support the DebugFull flag -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v140'">
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- currently we don't set an enhanced instruction set for 64-bit platforms as we can't guarantee customers
+       having cpus that support the AVX or AVX2 instruction set -->
+
+  <!-- Visual Studio 15.7 and later compiler specific warnings -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v141' Or '$(PlatformToolset)'=='v142'">
+    <ClCompile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <!-- /permissive- - Specify standards conformance mode to the compiler. -->
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Visual Studio 2015 Update 3 onwards supports the language standard option  -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'!='v110' And '$(PlatformToolset)'!='v120'">
+    <ClCompile>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

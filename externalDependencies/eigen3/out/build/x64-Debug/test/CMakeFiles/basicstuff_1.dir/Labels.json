@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/test/basicstuff.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "basicstuff_1"
+	}
+}

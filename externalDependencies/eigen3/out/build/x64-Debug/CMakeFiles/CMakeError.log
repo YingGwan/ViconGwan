@@ -1,0 +1,207 @@
+Performing C++ SOURCE FILE Test EIGEN_COMPILER_SUPPORT_CPP11 failed with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_310ad && [1/2] Building CXX object CMakeFiles\cmTC_310ad.dir\src.cxx.obj
+cl: 命令行 warning D9002 :忽略未知选项“-std=c++11”
+[2/2] Linking CXX executable cmTC_310ad.exe
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test EIGEN_COMPILER_SUPPORT_CXX11 failed with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_e203a && [1/2] Building CXX object CMakeFiles\cmTC_e203a.dir\src.cxx.obj
+cl: 命令行 warning D9002 :忽略未知选项“-std=c++11”
+[2/2] Linking CXX executable cmTC_e203a.exe
+
+
+Source file was:
+int main() { return 0; }
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9f5e9 && [1/2] Building C object CMakeFiles\cmTC_9f5e9.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_9f5e9.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_9f5e9.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_9f5e9.dir\ /FS -c CheckIncludeFile.c
+CheckIncludeFile.c(1): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+The MPI test test_mpi for C in mode normal failed to compile with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fa360 && [1/2] Building C object CMakeFiles\cmTC_fa360.dir\test_mpi.c.obj
+FAILED: CMakeFiles/cmTC_fa360.dir/test_mpi.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_fa360.dir\test_mpi.c.obj /FdCMakeFiles\cmTC_fa360.dir\ /FS -c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c(1): fatal error C1083: 无法打开包括文件: “mpi.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+The MPI test test_mpi for CXX in mode normal failed to compile with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_4cd22 && [1/2] Building CXX object CMakeFiles\cmTC_4cd22.dir\test_mpi.cpp.obj
+FAILED: CMakeFiles/cmTC_4cd22.dir/test_mpi.cpp.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W4 /GR /EHsc /EHsc /wd4127 /wd4505 /wd4714 /D_CRT_SECURE_NO_WARNINGS /D_SCL_SECURE_NO_WARNINGS  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_4cd22.dir\test_mpi.cpp.obj /FdCMakeFiles\cmTC_4cd22.dir\ /FS -c D:\ShapeLabEmpty\ShapeLabEmpty\eigen3\out\build\x64-Debug\CMakeFiles\FindMPI\test_mpi.cpp
+D:\ShapeLabEmpty\ShapeLabEmpty\eigen3\out\build\x64-Debug\CMakeFiles\FindMPI\test_mpi.cpp(1): fatal error C1083: 无法打开包括文件: “mpi.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Performing C SOURCE FILE Test SCOTCH_Num_4 failed with the following compile output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_10627 && [1/2] Building C object CMakeFiles\cmTC_10627.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_10627.dir/src.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DSCOTCH_Num_4 /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_10627.dir\src.c.obj /FdCMakeFiles\cmTC_10627.dir\ /FS -c src.c
+src.c(4): fatal error C1083: 无法打开包括文件: “scotch.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <stdio.h>
+#include <stdint.h>
+#include <scotch.h>
+int main(int argc, char **argv) {
+  if (sizeof(SCOTCH_Num) == 4)
+    return 0;
+  else
+    return 1;
+}
+
+Performing C SOURCE FILE Test SCOTCH_Num_8 failed with the following compile output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0ca78 && [1/2] Building C object CMakeFiles\cmTC_0ca78.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_0ca78.dir/src.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DSCOTCH_Num_8 /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_0ca78.dir\src.c.obj /FdCMakeFiles\cmTC_0ca78.dir\ /FS -c src.c
+src.c(4): fatal error C1083: 无法打开包括文件: “scotch.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <stdio.h>
+#include <stdint.h>
+#include <scotch.h>
+int main(int argc, char **argv) {
+  if (sizeof(SCOTCH_Num) == 8)
+    return 0;
+  else
+    return 1;
+}
+
+The MPI test test_mpi for C in mode normal failed to compile with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_23d6e && [1/2] Building C object CMakeFiles\cmTC_23d6e.dir\test_mpi.c.obj
+FAILED: CMakeFiles/cmTC_23d6e.dir/test_mpi.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_23d6e.dir\test_mpi.c.obj /FdCMakeFiles\cmTC_23d6e.dir\ /FS -c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c(1): fatal error C1083: 无法打开包括文件: “mpi.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+The MPI test test_mpi for CXX in mode normal failed to compile with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_39805 && [1/2] Building CXX object CMakeFiles\cmTC_39805.dir\test_mpi.cpp.obj
+FAILED: CMakeFiles/cmTC_39805.dir/test_mpi.cpp.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W4 /GR /EHsc /EHsc /wd4127 /wd4505 /wd4714 /D_CRT_SECURE_NO_WARNINGS /D_SCL_SECURE_NO_WARNINGS  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_39805.dir\test_mpi.cpp.obj /FdCMakeFiles\cmTC_39805.dir\ /FS -c D:\ShapeLabEmpty\ShapeLabEmpty\eigen3\out\build\x64-Debug\CMakeFiles\FindMPI\test_mpi.cpp
+D:\ShapeLabEmpty\ShapeLabEmpty\eigen3\out\build\x64-Debug\CMakeFiles\FindMPI\test_mpi.cpp(1): fatal error C1083: 无法打开包括文件: “mpi.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Performing C SOURCE FILE Test PTSCOTCH_Num_4 failed with the following compile output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c8c25 && [1/2] Building C object CMakeFiles\cmTC_c8c25.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_c8c25.dir/src.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DPTSCOTCH_Num_4 /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_c8c25.dir\src.c.obj /FdCMakeFiles\cmTC_c8c25.dir\ /FS -c src.c
+src.c(4): fatal error C1083: 无法打开包括文件: “ptscotch.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <stdio.h>
+#include <stdint.h>
+#include <ptscotch.h>
+int main(int argc, char **argv) {
+  if (sizeof(SCOTCH_Num) == 4)
+    return 0;
+  else
+    return 1;
+}
+
+Performing C SOURCE FILE Test PTSCOTCH_Num_8 failed with the following compile output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8b0ec && [1/2] Building C object CMakeFiles\cmTC_8b0ec.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_8b0ec.dir/src.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 -DPTSCOTCH_Num_8 /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_8b0ec.dir\src.c.obj /FdCMakeFiles\cmTC_8b0ec.dir\ /FS -c src.c
+src.c(4): fatal error C1083: 无法打开包括文件: “ptscotch.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <stdio.h>
+#include <stdint.h>
+#include <ptscotch.h>
+int main(int argc, char **argv) {
+  if (sizeof(SCOTCH_Num) == 8)
+    return 0;
+  else
+    return 1;
+}
+
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_FASTMATH failed with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a1b30 && [1/2] Building CXX object CMakeFiles\cmTC_a1b30.dir\src.cxx.obj
+cl: 命令行 warning D9002 :忽略未知选项“-ffast-math”
+[2/2] Linking CXX executable cmTC_a1b30.exe
+
+
+Source file was:
+int main() { return 0; }
+The MPI test test_mpi for C in mode normal failed to compile with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_bd064 && [1/2] Building C object CMakeFiles\cmTC_bd064.dir\test_mpi.c.obj
+FAILED: CMakeFiles/cmTC_bd064.dir/test_mpi.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_bd064.dir\test_mpi.c.obj /FdCMakeFiles\cmTC_bd064.dir\ /FS -c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c(1): fatal error C1083: 无法打开包括文件: “mpi.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+The MPI test test_mpi for C in mode normal failed to compile with the following output:
+Change Dir: D:/ShapeLabEmpty/ShapeLabEmpty/eigen3/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2a202 && [1/2] Building C object CMakeFiles\cmTC_2a202.dir\test_mpi.c.obj
+FAILED: CMakeFiles/cmTC_2a202.dir/test_mpi.c.obj 
+C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_2a202.dir\test_mpi.c.obj /FdCMakeFiles\cmTC_2a202.dir\ /FS -c "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c"
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.15\Modules\FindMPI\test_mpi.c(1): fatal error C1083: 无法打开包括文件: “mpi.h”: No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+

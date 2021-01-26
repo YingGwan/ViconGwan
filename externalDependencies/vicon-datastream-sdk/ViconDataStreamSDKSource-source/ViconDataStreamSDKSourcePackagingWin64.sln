@@ -1,0 +1,132 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4E5F3D79-7608-4307-8195-5313111BA654}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Vicon\CrossMarket\DataStream\ViconDataStreamSDKSourcePackagingWin64\postbuild_deploy.Release.xml = ..\..\..\Vicon\CrossMarket\DataStream\ViconDataStreamSDKSourcePackagingWin64\postbuild_deploy.Release.xml
+		..\..\..\..\source\build\msvc\natvis\Boost.natvis = ..\..\..\..\source\build\msvc\natvis\Boost.natvis
+		..\..\..\..\source\build\msvc\natvis\Qt5.natvis = ..\..\..\..\source\build\msvc\natvis\Qt5.natvis
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StreamCommon", "Vicon\CrossMarket\StreamCommon\StreamCommon.vcxproj", "{00000000-0000-0000-0000-000011615E7F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconCGStream", "Vicon\CrossMarket\DataStream\ViconCGStream\ViconCGStream.vcxproj", "{00000000-0000-0000-0000-0000D7AF35E6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconCGStreamClient", "Vicon\CrossMarket\DataStream\ViconCGStreamClient\ViconCGStreamClient.vcxproj", "{00000000-0000-0000-0000-0000DBDC1B0D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconCGStreamClientSDK", "Vicon\CrossMarket\DataStream\ViconCGStreamClientSDK\ViconCGStreamClientSDK.vcxproj", "{00000000-0000-0000-0000-0000BE603AC0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDKCore", "Vicon\CrossMarket\DataStream\ViconDataStreamSDKCore\ViconDataStreamSDKCore.vcxproj", "{00000000-0000-0000-0000-0000DAECF320}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDKCoreUtils", "Vicon\CrossMarket\DataStream\ViconDataStreamSDKCoreUtils\ViconDataStreamSDKCoreUtils.vcxproj", "{00000000-0000-0000-0000-0000C8A4314E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDK_C", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_C\ViconDataStreamSDK_C.vcxproj", "{00000000-0000-0000-0000-0000ACB8BDE5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDK_CPP", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_CPP\ViconDataStreamSDK_CPP.vcxproj", "{00000000-0000-0000-0000-00004336DFCF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDK_CPPRetimerTest", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_CPPRetimerTest\ViconDataStreamSDK_CPPRetimerTest.vcxproj", "{00000000-0000-0000-0000-00009C6B44E4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDK_CPPTest", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_CPPTest\ViconDataStreamSDK_CPPTest.vcxproj", "{00000000-0000-0000-0000-0000CB860AFF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDK_CTest", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_CTest\ViconDataStreamSDK_CTest.vcxproj", "{00000000-0000-0000-0000-0000DC3432C5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDK_DotNET", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_DotNET\ViconDataStreamSDK_DotNET.vcxproj", "{00000000-0000-0000-0000-00009BBA9CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViconDataStreamSDK_DotNETTest", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_DotNETTest\ViconDataStreamSDK_DotNETTest.csproj", "{00000000-0000-0000-0000-000011B6C565}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ViconDataStreamSDK_MATLAB", "Vicon\CrossMarket\DataStream\ViconDataStreamSDK_MATLAB\ViconDataStreamSDK_MATLAB.vcxproj", "{00000000-0000-0000-0000-0000F6BC4654}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		InternalRelease|x64 = InternalRelease|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00000000-0000-0000-0000-000011615E7F}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-000011615E7F}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-000011615E7F}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-000011615E7F}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-000011615E7F}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-000011615E7F}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000D7AF35E6}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000D7AF35E6}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000D7AF35E6}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000D7AF35E6}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000D7AF35E6}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000D7AF35E6}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000DBDC1B0D}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000DBDC1B0D}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000DBDC1B0D}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000DBDC1B0D}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000DBDC1B0D}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000DBDC1B0D}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000BE603AC0}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000BE603AC0}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000BE603AC0}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000BE603AC0}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000BE603AC0}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000BE603AC0}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000DAECF320}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000DAECF320}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000DAECF320}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000DAECF320}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000DAECF320}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000DAECF320}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000C8A4314E}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000C8A4314E}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000C8A4314E}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000C8A4314E}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000C8A4314E}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000C8A4314E}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000ACB8BDE5}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000ACB8BDE5}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000ACB8BDE5}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000ACB8BDE5}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000ACB8BDE5}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000ACB8BDE5}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-00004336DFCF}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-00004336DFCF}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-00004336DFCF}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-00004336DFCF}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-00004336DFCF}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-00004336DFCF}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-00009C6B44E4}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-00009C6B44E4}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-00009C6B44E4}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-00009C6B44E4}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-00009C6B44E4}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-00009C6B44E4}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000CB860AFF}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000CB860AFF}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000CB860AFF}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000CB860AFF}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000CB860AFF}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000CB860AFF}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000DC3432C5}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000DC3432C5}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000DC3432C5}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000DC3432C5}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000DC3432C5}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000DC3432C5}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-00009BBA9CAD}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-00009BBA9CAD}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-00009BBA9CAD}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-00009BBA9CAD}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-00009BBA9CAD}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-00009BBA9CAD}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-000011B6C565}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-000011B6C565}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-000011B6C565}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-000011B6C565}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-000011B6C565}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-000011B6C565}.Release|x64.Build.0 = Release|x64
+		{00000000-0000-0000-0000-0000F6BC4654}.Debug|x64.ActiveCfg = Debug|x64
+		{00000000-0000-0000-0000-0000F6BC4654}.Debug|x64.Build.0 = Debug|x64
+		{00000000-0000-0000-0000-0000F6BC4654}.InternalRelease|x64.ActiveCfg = InternalRelease|x64
+		{00000000-0000-0000-0000-0000F6BC4654}.InternalRelease|x64.Build.0 = InternalRelease|x64
+		{00000000-0000-0000-0000-0000F6BC4654}.Release|x64.ActiveCfg = Release|x64
+		{00000000-0000-0000-0000-0000F6BC4654}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = postSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

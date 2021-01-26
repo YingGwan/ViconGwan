@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <DisableSpecificWarnings>
+        4018; <!-- '<' : signed/unsigned mismatch -->
+        4100; <!-- 'i_rprovidedchannelinfo' : unreferenced formal parameter -->
+        4127; <!-- conditional expression is constant -->
+        4191; <!-- 'type cast' : unsafe conversion from 'farproc' to 'getclassobjectproc (__stdcall *)' -->
+        4206; <!-- nonstandard extension used : translation unit is empty -->
+        4245; <!-- 'initializing' : conversion from 'int' to 'treconid', signed/unsigned mismatch -->
+        4263; <!-- 'const char *istringdirect::string(void) const' : member function does not override any base class virtual member function -->
+        4264; <!-- 'void istring::string(istring &) const' : no override available for virtual member function from base 'istring'; function is hidden; a:\dev\source\trunk2\omg\utils\coretypesinterface/istring.h(26) : see declaration of 'istring::string'; a:\dev\source\trunk2\omg\utils\coretypesinterface/istring.h(16) : see declaration of 'istring' -->
+        4347; <!-- behavior change: 'tchilditeratinghandle vlookuphandleconst<pointedatobjecttemplate>::begin<hideviceoutputcomponentitconst>(void) const with [tchilditeratinghandle=hideviceoutputcomponentitconst,pointedatobjecttemplate=ideviceoutput]' is called instead of 'viteratinghandleconst<pointedatobjecttemplate> vlookuphandleconst<ideviceoutput>::begin(void) const with [pointedatobjecttemplate=vnullcontainer]'; -->
+        4350; <!-- behavior change: 'boost::iterator_range<iteratort>::iterator_range(const boost::iterator_range<iteratort> &) with [iteratort=const char *]' called instead of 'boost::iterator_range<iteratort>::iterator_range<boost::iterator_range<iteratort>>(range &) with [iteratort=const char *,range=boost::iterator_range<const char *>]'; -->
+        4365; <!-- 'argument' : conversion from 'uint' to 'int', signed/unsigned mismatch -->
+        4371; <!-- 'std::const_mem_fun_t<_Result,_Ty>' : layout of class may have changed from a previous version of the compiler due to better packing of member 'std::const_mem_fun_t<_Result,_Ty>::_Pmemfun' -->
+        4435; <!-- Object layout under /vd2 will change due to virtual base -->
+        4437; <!-- dynamic_cast from virtual base 'BaseClass' to 'DerivedClass' could fail in some contexts. -->
+        4503; <!-- 'identifier' : decorated name length exceeded, name was truncated -->
+        4505; <!-- unreferenced local function has been removed -->
+        4512; <!-- 'vchannelproviderdevicesenumerated' : assignment operator could not be generated; a:\dev\source\trunk2\vicon\lifesciences\nexus\hardwaresystemplugin\channelproviderdevicesenumerated.h(16) : see declaration of 'vchannelproviderdevicesenumerated' -->
+        4514; <!-- 'operator ==' : unreferenced inline function has been removed -->
+        4555; <!-- expression has no effect; expected expression with side-effect -->
+        4571; <!-- informational: catch(...) semantics changed since visual c++ 7.1; structured exceptions (seh) are no longer caught; a:\dev\thirdparty\qt\qt-everywhere-opensource-src-4.7.4-windows-vc100-x32-p56053\include\qtcore\../../src/corelib/tools/qlist.h(495) : while compiling class template member function 'void qlist<t>::append(const t &) with [t=qstring]'; a:\dev\thirdparty\qt\qt-everywhere-opensource-src-4.7.4-windows-vc100-x32-p56053\include\qtcore\../../src/corelib/tools/qstringlist.h(67) : see reference to class template instantiation 'qlist<t> with [t=qstring]' being compiled -->
+        4625; <!-- 'omg::utilsqt::keyboardmonitor' : copy constructor could not be generated because a base class copy constructor is inaccessible -->
+        4626; <!-- 'omg::utilsqt::keyboardmonitor' : assignment operator could not be generated because a base class assignment operator is inaccessible -->
+        4061; <!-- enumerator 'tooltip' in switch of enum 'qevent::type' is not explicitly handled by a case label -->
+        4062; <!-- enumerator 'enone' in switch of enum 'vsystemmodelview::texpand' is not handled -->
+        4266; <!-- 'void vobserverhelper<tobserver,tobserved>::onobserveradded(const tobserved &)' : no override available for virtual member function from base 'vobserverhelper<tobserver,tobserved>'; function is hidden -->
+        4718; <!-- 'QMapNode<int,VHotkeyManagerQt_TShortcutInfo *>::destroySubTree' : recursive call has no side effects, deleting  - PS note: warning only triggered at end of tranlation unit-->
+        4995; <!-- 'sprintf': name was marked as #pragma deprecated -->
+        4996; <!-- 'read': the posix name for this item is deprecated. instead, use the iso c++ conformant name: _read. see online help for details. -->
+        4619; <!-- #pragma warning : there is no warning number '4705' -->
+        4668; <!-- 'use_protection' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif' -->
+        4640; <!-- 's_meshhandlehelper' : construction of local static object is not thread-safe -->
+        4710; <!-- 'int swprintf(wchar_t *,size_t,const wchar_t *,...)' : function not inlined -->
+        4724; <!-- boost-1_48\boost\random\uniform_int_distribution.hpp(78): warning C4724: potential mod by 0 -->
+        4711; <!-- function 'virtual __thiscall vmousestate::~vmousestate(void)' selected for automatic inline expansion -->
+        4820; <!-- 'qbytearray::data' : '3' bytes padding added after data member 'qbytearray::data::array' -->
+        4548; <!-- expression before comma has no effect; expected expression with side-effect' -->
+        4836; <!-- nonstandard extension used : 'VCopyingImpl::CopyMarkerData::SMarkerData' : local types or unnamed types cannot be used as template arguments' -->
+        4714; <!-- function 'vnl_rational vnl_sse<T>::dot_product(const T *,const T *,unsigned int)' marked as __forceinline not inlined -->
+        4868; <!-- compiler may not enforce left-to-right evaluation order in braced initializer list -->
+        %(DisableSpecificWarnings)
+      </DisableSpecificWarnings>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <!-- warning LNK4221 : This object file does not define any previously undefined public symbols,
+           so it will not be used by any link operation that consumes this library -->
+    <Lib>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <!-- Visual Studio 14.0 and later compiler specific warnings -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v140' Or '$(PlatformToolset)'=='v141' Or '$(PlatformToolset)'=='v142'">
+    <ClCompile>
+      <DisableSpecificWarnings>
+        4355; <!-- 'this': used in base member initializer list. Triggered by including ppltaskscheduler.h -->
+        4464; <!-- relative include path contains '..' -->
+        4623; <!-- default constructor was implicitly defined as deleted -->
+        5026; <!-- move constructor was implicitly defined as deleted -->
+        5027; <!-- move assignment operator was implicitly defined as deleted -->
+        %(DisableSpecificWarnings)
+      </DisableSpecificWarnings>
+      <!-- /Zc:strictStrings - Disable string literal type conversion. -->
+      <AdditionalOptions>/Zc:strictStrings %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <!-- Visual Studio 15.0 and later compiler specific warnings -->
+  <ItemDefinitionGroup Condition="'$(PlatformToolset)'=='v141' Or '$(PlatformToolset)'=='v142'">
+    <ClCompile>
+      <DisableSpecificWarnings>
+        4774; <!-- 'sprintf_s' : format string expected in argument 3 is not a string literal -->
+        4574; <!-- '_ITERATOR_DEBUG_LEVEL' is defined to be '0': did you mean to use '#if _ITERATOR_DEBUG_LEVEL'?-->
+        4582; <!-- 'std::_Optional_destruct_base<_Ty,false>::_Value': constructor is not implicitly called -->
+        4583; <!-- 'std::_Optional_destruct_base<_Ty,false>::_Value': destructor is not implicitly called -->
+        4866; <!-- compiler may not enforce left-to-right evaluation order for call to * -->
+        5045; <!-- Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified. -->
+        %(DisableSpecificWarnings)
+      </DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+
+  <ItemGroup />
+</Project>
